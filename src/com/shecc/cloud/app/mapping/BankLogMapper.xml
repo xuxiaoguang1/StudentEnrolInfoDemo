@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shecc.cloud.app.dao.BankLogMapper" >
+   <resultMap type="com.shecc.cloud.app.model.Log" id="log">
+        <id property="id" column="id"/>
+        <result property="operatetime" column="operatetime"/>
+        <result property="operateclass" column="operateclass"/>
+        <result property="operategrade" column="operategrade"/>
+        <result property="operateinfo" column="operateinfo"/>
+        <result property="operateaccount" column="operateaccount"/>
+        <result property="operateip" column="operateip"/>
+    </resultMap>
+    <select id="getLogs" resultType="com.shecc.cloud.app.model.Log" parameterType="Map">
+        select log.id,log.operatetime, log.operateclass, log.operategrade, log.operateinfo, log.operateaccount, log.operateip from test.bank_log log 
+        <trim suffixOverrides="and">
+            <where>
+                <if test="optAccount!=null"> log.operateaccount = #{optAccount} and </if>
+                <if test="optClass!=null"> log.operateclass like CONCAT(CONCAT('%',#{optClass}),'%') and </if>
+                <if test="optGrade!=null"> log.operategrade = #{optGrade} and </if>
+                <if test="optInfo!=null"> log.operateinfo like  CONCAT(CONCAT('%', #{optInfo}), '%') and</if>
+                <if test="startTime!=null">  <![CDATA[ log.operatetime >= #{startTime}  ]]> </if>
+                <if test="endTime!=null"> <![CDATA[ log.operatetime <= #{endTime} ]]> </if>
+            </where>
+        </trim>
+        limit #{start},#{end}
+    </select>
+    
+    <select id="getLogCount" resultType="long">
+        select count(*) from test.bank_log log
+        <trim suffixOverrides="and">
+            <where>
+                <if test="optAccount!=null"> log.operateaccount = #{optAccount} and </if>
+                <if test="optClass!=null"> log.operateclass like CONCAT(CONCAT('%',#{optClass}),'%') and </if>
+                <if test="optGrade!=null"> log.operategrade = #{optGrade} and </if>
+                <if test="optInfo!=null"> log.operateinfo like CONCAT(CONCAT('%', #{optInfo}), '%') and</if>
+                <if test="startTime!=null">  <![CDATA[ log.operatetime >= #{startTime}  ]]> </if>
+                <if test="endTime!=null"> <![CDATA[ log.operatetime <= #{endTime} ]]> </if>
+            </where>
+        </trim>
+    </select>
+</mapper>

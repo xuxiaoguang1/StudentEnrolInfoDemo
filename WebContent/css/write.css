@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+
+.oneTitle{ width:1002px; margin:15px auto;height:28px; }
+.oneTitletext{ width:952px; height:28px; background:url(../images/table_ioc.png) no-repeat;  color:#616669; font-size:16px; font-weight:bold; padding-left:50px;}

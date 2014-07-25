@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0}
+body{ font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu; font-size:12px; color:#616161;  background:url(file:///C|/Users/Administrator/Desktop/ico/bg_01.jpg) repeat-x; width:100%; }
+ul li { list-style-type:none;}
+.left{ float: left}
+.right{ float:right}
+img{ border:none}
+
+/*logo*/
+.logo{ width:84%; height:100px; border-bottom:1px solid #22b3b3; background-color:#43c5c5; padding-left:8%; padding-right:8%; overflow:hidden}
+.tool{ width:35%; height:85px; padding-top:15px; text-align:right; line-height:36px; color:#FFF}
+.tool p{ height:16px; width:100%;  margin-bottom:15px; font-size:14px;}
+.tool a{ color:#FFF; text-decoration:none}
+.tool a:hover{ color:#FFF; text-decoration:none}
+
+.banner{ width:80%; height:275px; background:#c4efef; position:relative;  padding-left:10%; padding-right:10%;}
+.bannerpic{margin:0px auto; width:100%; background: url(../images/banner.png) no-repeat center; height:275px;}
+.could{ position:absolute; width:100%; height:7px; background:url(../images/cloud.png) repeat-x; left:0px; top:270px;}
+
+.regionSelection{ width:80%; height:49px; padding-left:10%; padding-right:10%; margin-top:15px;}
+.regionSelectionTitle{ width:100%; height:49px; background:url(../images/index_ioc.png) no-repeat left; padding-left:6%; line-height:49px;}
+.regionList{ width:80%; padding-left:10%; padding-right:10%; margin-top:15px;}
+.regionList li{ width:108px; height:45px; float:left; margin-right:3%; margin-bottom:3%; text-align:center; font-size:16px; font-weight:bold; line-height:45px; color:#fff;}
+.regionListOne{ width:108px; height:45px; background:url(../images/index_but.png) no-repeat; position:relative;cursor:hand}
+.regionListOnehover{ width:167px; height:89px; position:absolute; top:-90px; left:-30px; background:url(../images/index_but4.png) no-repeat; z-index:100 ; line-height:23px; text-align:left; padding-top:10px;}
+.regionListOnehover h4{ font-size:16px; color:#1f9696; padding-left:40px;}
+.regionListOnehover p{ font-size:12px; color:#000; font-weight:normal;padding-left:30px;}
+
+.regionListTwo{ width:108px; height:45px; background:url(../images/index_but1.png) no-repeat; position:relative}
+.regionListTwohover{ width:167px; height:89px; position:absolute; top:-90px; left:-30px; background:url(../images/index_but3.png) no-repeat; z-index:100; line-height:23px; text-align:left; padding-top:10px;}
+.regionListTwohover h4{ font-size:16px; color:#128141; padding-left:40px;}
+.regionListTwohover p{ font-size:12px; color:#128141; font-weight:normal;padding-left:30px;}
+
+
+.regionListThree{ width:108px; height:45px; background:url(../images/index_but2.png) no-repeat; position:relative}
+.regionListThreehover{ width:153px; height:54px; position:absolute; top:-60px; left:-30px; background:url(../images/index_but5.png) no-repeat; z-index:100; line-height:23px; text-align:left; padding-top:16px;}
+.regionListThreehover h4{ font-size:16px; color:#9b9b9b; padding-left:40px;}
+
+
+.news{ width:80%; padding-left:10%; padding-right:10%; height:182px;}
+.newsLeft{ width:37%; height:182px; padding-right:10%; padding-left:3%}
+.newsLtitle{ width:82%; background:url(../images/index_ioc1.png) no-repeat left; padding-left:10%; height:32px; line-height:32px; padding-right:8%}
+.newsLtitle h2{ font-size:16px; font-weight:bold; color:#148f8f; float:left}
+.newsLtitle span{ float:right}
+.newsLtitleli{ height:150px; width:100%;}
+.newsLtitleli li{ height:30px; font-size:14px; background:url(../images/arrow.png) no-repeat left; line-height:30px; padding-left:3%}
+
+
+.newsRight{ width:37%; height:182px; padding-right:10%; padding-left:3%}
+.newsRtitle{ width:82%; background:url(../images/index_ioc2.png) no-repeat left; padding-left:10%; height:32px; line-height:32px; padding-right:8%}
+.newsRtitle h2{ font-size:16px; font-weight:bold; color:#148f8f; float:left}
+.newsRtitle span{ float:right}
+.newsRtitleli{ height:150px; width:100%;}
+.newsRtitleli li{ height:30px; font-size:14px; background:url(../images/arrow.png) no-repeat left; line-height:30px; padding-left:3%}
+.bottom{ width:100%; height:66px; border-top:1px solid #43c5c5; background:#f0f0f0; margin-top:15px; text-align:center; padding-top:10px;}

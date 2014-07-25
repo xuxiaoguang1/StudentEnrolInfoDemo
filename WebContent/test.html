@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery/jquery1.9.js"></script>
+	<Meta http-equiv="Content-Type" Content="text/html; Charset=utf8">
+</head>
+<body>
+	<a href="#" id="addDiv">追加</a>
+	<table border=1 style="width:700px">
+		<thead>
+			<tr>
+		      <th>序号</th>
+		      <th>姓名</th> 
+		      <th>关系</th>
+		      <th>性别</th>
+		      <th>联系方式</th>
+		      <th>添加</th>
+		    </tr>
+		</thead>
+		<tbody>
+			<tr id="tr1">
+				<td>1</td>
+				<td><input type="text" name="name"/></td>
+				<td><input type="text" name="relation"/></td>
+				<td><input type="text" name="gender"/></td>
+				<td><input type="text" name="contact"/></td>
+				<td><a href="#" id="a1">删除</a></td>
+			</tr>
+		</tbody>
+		</tbody>
+	</table>
+</body>
+<script type="text/javascript">
+	$(function(){
+		var add = 1;
+		$("#addDiv").click(function(event) {
+			var $tr = $("#tr1");
+			var $clone=$tr.clone(true);
+			
+			$clone.attr({
+				id: "tr"+ ++add
+			});
+			$tr.parent().append($clone);
+			
+			var $input=$clone.find('input');
+			$input.each(function(index,value){
+						value.name = value.name + add;
+					});
+
+			var $a=$clone.find('a');
+			$a.attr({id: 'a' + add});
+			
+		});
+		
+		$('tr>td>a:first').click(function(event) {
+			$(this).parent().parent().remove();
+		});
+		/*function del(id){
+			$("#"+id).click(function() {
+				$("#"+id).parent().parent().remove();
+			});
+		}*/
+	});
+</script>
+</html>
